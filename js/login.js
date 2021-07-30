@@ -18,7 +18,7 @@ function createSessionAjax(id, email){
             userEmail: email
         },
         success: function (){
-            alert("ok")
+            //alert("ok")
             //console.log(document.getElementById("new_select"));
             //document.getElementById("new_select").innerHTML = response;
             window.location.replace("manage_categories.php");
