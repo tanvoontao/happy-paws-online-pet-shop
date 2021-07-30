@@ -2,6 +2,13 @@
 include("include/security.php");
 require "setting/settings.php";
 
+    if(isset($_POST['userId'])){
+        session_start();
+        $_SESSION['userId'] = $_POST['userId'];
+        $_SESSION['userEmail'] = $_POST['userEmail'];
+        //echo ("ok");
+    }
+
 
     // add new category to database
     if (isset($_POST["category_name"])){

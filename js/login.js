@@ -12,7 +12,7 @@ firebase.initializeApp(config);
 function createSessionAjax(id, email){
     $.ajax({
         type: 'post',
-        url: 'code.php',
+        url: 'code2.php',
         data: {
             userId: id,
             userEmail: email
