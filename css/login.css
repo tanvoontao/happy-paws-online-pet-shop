@@ -1,0 +1,275 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+}
+
+:root{
+    --green1: #081c15; /*60%*/
+
+    --green2: #1b4332; /*10%*/
+
+    --green3: #2d6a4f; /*30%*/
+    --green4: #40916c; /*30%*/
+    --green5: #52b788; /*30%*/
+
+    --green6: #74c69d; /*60%*/
+    --green7: #95d5b2; /*60%*/
+    --green8: #b7e4c7; /*60%*/
+    --green9: #d8f3dc; /*60%*/
+}
+
+.loginPage_bg{
+    position: relative;
+    width: 100%;
+    height:100vh;
+    background: linear-gradient(120deg, var(--green1),var(--green3));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.loginSectionCard{
+    z-index: 99;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+
+
+    background: rgba( 216, 243, 220, 0.35 );
+    backdrop-filter: blur( 6.0px );
+    -webkit-backdrop-filter: blur( 6.0px );
+    border-radius: 20px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    overflow: hidden;
+    -webkit-box-shadow: 7px 8px 24px -5px rgba(216,243,220,0.3); 
+box-shadow: 7px 8px 24px -5px rgba(216,243,220,0.3);
+}
+
+/* Logo and Map */
+.loginSectionCard .logoAndMap{
+    width: 100%;
+    background: rgba( 27, 67, 50, 0.5 );
+    backdrop-filter: blur( 6.0px );
+    -webkit-backdrop-filter: blur( 6.0px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 20px 0 0 20px;
+}
+.loginSectionCard .logoAndMap div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin: 5px 0;
+}
+.loginSectionCard .logoAndMap div p{
+    font-size: 40px;
+    color: var(--green9);
+}
+.loginSectionCard .logoAndMap div img{
+    width: 15%;
+    margin: 0 15px;
+}
+
+.loginSectionCard .logoAndMap iframe{
+    width:100%;
+    height:300px;
+}
+
+/* Login Forms */
+.loginSectionCard form{
+    position: relative;
+    padding: 20px;
+    width: 70%;
+    height: 100%;
+}
+/* submit btn */
+.loginSectionCard form > div input[type=submit]{
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    background-color: var(--green3);
+    color: var(--green9);
+    outline: none;
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 700;
+    margin-top: 30px;
+}
+.loginSectionCard form > div input[type=submit]:hover{
+    background-color: var(--green9);
+    color: var(--green3);
+}
+
+.loginSectionCard form > .signIn_btn_wrapper{
+    position: relative;
+}
+.loginSectionCard form > .signIn_btn_wrapper span{
+    display: none;
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 30px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 4px solid transparent;
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: button-loading-spinner 1s ease infinite;
+}
+
+
+@keyframes button-loading-spinner {
+    from {
+      transform: rotate(0turn);
+    }
+  
+    to {
+      transform: rotate(1turn);
+    }
+  }
+  
+
+.loginSectionCard form h1{
+    font-size: 30px;
+    color: var(--green9);
+}
+
+.loginSectionCard form p{
+    margin: 40px 0;
+    position: relative;
+    border-bottom: 2px solid var(--green9);
+}
+.loginSectionCard form p input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.loginSectionCard form p label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: var(--green3);
+    transform: translateY(-50%);
+    font-size: 18px;
+    pointer-events: none;
+    transition: 0.5s;background: transparent;
+}
+
+
+
+.loginSectionCard form p input:focus ~ label,
+.loginSectionCard form p input:valid ~ label{
+    color: var(--green1);
+    top: -5px;
+
+}
+
+.loginSectionCard form p span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    height: 2px;
+    background-color: var(--green1);
+    transition: 0.5s;
+    width: 0%;
+}
+
+.loginSectionCard form p input:focus ~ span::before,
+.loginSectionCard form p input:valid ~ span::before{
+    width: 100%;
+}
+
+
+
+/* aurora bg */
+.loginPage_bg::before{
+    position: absolute;
+    content: '';
+    width: 70%;
+    height: 70%;
+    background: linear-gradient(90deg, var(--green3), var(--green1));
+    border-radius: 50%;
+    left: -10%;
+    top: -20%;
+    -webkit-filter: blur(90px);
+    filter: blur(90px);
+    
+}
+
+.loginPage_bg::after{
+    position: absolute;
+    content: '';
+    width: 70%;
+    height: 70%;
+    background: linear-gradient(90deg, var(--green9), var(--green5));
+    border-radius: 50%;
+    right: -10%;
+    bottom: -20%;
+    -webkit-filter: blur(90px);
+    filter: blur(90px);
+}
+section.circle{
+    position: absolute;
+    border-radius: 50%;
+    background-color: black;
+    background: linear-gradient(90deg, var(--green9), var(--green5));
+    opacity: 0.8;
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    animation: animate 10s linear infinite;
+    animation-delay: calc(-1s * var(--i));
+}
+section.circle:nth-child(1){
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    
+}
+
+section.circle:nth-child(2){
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    
+}
+
+section.circle:nth-child(3){
+    bottom: 0;
+    left: 550px;
+    width: 100px;
+    height: 100px;
+    
+}
+
+@keyframes animate {
+    0%, 100%{
+        transform: translateY(-60px);
+    }
+    50%{
+        transform: translateY(60px);
+    }
+}
+
+#error_txt{
+    color: red;
+}
+

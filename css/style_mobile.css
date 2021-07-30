@@ -1,0 +1,178 @@
+@media (max-width: 600px){
+    nav p a{
+        font-size: 55px;
+    }
+    article h1{
+
+        font-size: 11vw;
+    }
+    .grid_container_forCategory{
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto-fit,130px);
+        grid-gap: 15px;
+    }
+    .category_box p{
+        font-size: 7vw;
+    }
+    .category_box div{
+        height: 130px;
+    }
+    .clarify p{
+        font-size: 5vw;
+    }
+    .startingPage p{
+        font-size: 9vw;
+    }
+    .startingPage{
+        top: 75px;
+    }
+    .nav_bar_category li a p{
+        font-size: 20px;
+    }
+    .nav_bar_category li{
+        border-radius: 35px;
+        padding: 5px;
+    }
+
+
+    /* dry food product card */
+    .product_card{
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .product_card img{
+        width: 25vw;
+        height: 100%;
+        border-radius: 10px;
+    }
+    .item_detail{
+        width: 100%;
+        margin-left: 10px;
+        justify-content: space-between;
+    }
+    .item_detail div p{
+        font-size: 5vw;
+    
+    }
+    .item_detail div{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .item_detail p{
+        font-size: 7vw;
+    }
+    .item_detail div select option{
+        font-size: 5vw;
+    }
+    
+    
+    .addToCart_btn{
+        width: auto;
+        margin-top: 0;
+    }
+    .addTocart_Text{
+        font-size: 13px;
+    }
+    
+    .grid_container{
+        grid-template-columns: none;
+        grid-auto-rows: 33vw;
+    }
+
+    /*alert box*/
+    .popUpHeading p{
+        font-size: 7vw;
+    }
+    .popUpText p{
+        font-size: 6vw;
+    }
+    .ok{
+        font-size: 6vw;
+    }
+    .popUpAlertBox{
+        width: 80%;
+    }
+
+    
+    .item_detail div select{
+        font-size: 13px;
+    }
+    .item_detail div select{
+        width: 95px;
+        
+    }
+    footer p{
+        font-size: 5vw;
+    }
+    .GoBackBtn{
+        font-size: 5vw;
+    }
+    .total{
+        font-size: 8vw;
+    }
+    .confirm_btn,
+    .sendBtn{
+        font-size: 8vw;
+    }
+    
+    .shopping_cart_product_card{
+
+        height: 30vw;
+
+    
+    }
+    
+    .shopping_cart_product_card{
+        height: 30vw;
+    }
+
+    .shopping_cart_product_card div p{
+        font-size: 5vw;
+    }
+    .shopping_cart_product_card div div p{
+        font-size: 6vw;
+    }
+
+    .shopping_cart_product_card div div div input{
+        font-size: 6vw;
+    }
+
+    .shopping_cart_product_card div div div button{
+        font-size: 6vw;
+        width: 6vw;
+        height: 6vw;
+    }
+    .delete{
+        font-size: 7vw;
+    }
+
+
+
+
+
+
+
+
+    .confirm_btn,
+    .sendBtn{
+        font-size: 8vw;
+    }
+    
+.chatContainer p{
+    font-size: 6vw;
+}
+.chatContainer p input{
+    width: 60%;
+    font-size: 4vw;
+}
+.chatContainer p{
+
+    width: 65%;
+
+}
+
+}
