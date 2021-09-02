@@ -111,7 +111,7 @@ require "setting/settings.php";
                                         if (mysqli_num_rows($product_query_run) > 0){
                                             while($row2 = mysqli_fetch_assoc($product_query_run)){
                                                 echo '
-                                                <option value="'.$row2['product_name'].','.$row2['product_price'].'">'.$row2['product_name'].'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RM '.$row2['product_price'].'</option>
+                                                <option value="'.$row2['product_name'].','.$row2['product_price'].'">'.$row2['product_name'].' - RM '.$row2['product_price'].'</option>
                                                 ';
                                             }
                                         }
