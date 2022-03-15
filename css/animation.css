@@ -1,357 +1,330 @@
-.pulse{
-    position: relative;
-
+/* test halo */
+.pulse {
+  position: relative;
 }
-.pulse:before{
-    position: absolute;
-    bottom: 45px;
-    content: "";
-    height: 53px;
-    width: 130px;
-    background-color: white;
-    border-radius: 30px;
-    z-index: -1;
-    opacity: 0.7;
-}
-
-.pulse:after{
-    position: absolute;
-    left: 0px;
-    bottom: 45px;
-    content: "";
-    height: 53px;
-    width: 130px;
-    background-color: white;
-    border-radius: 30px;
-    z-index: -1;
-    opacity: 0.7;
+.pulse:before {
+  position: absolute;
+  bottom: 45px;
+  content: "";
+  height: 53px;
+  width: 130px;
+  background-color: white;
+  border-radius: 30px;
+  z-index: -1;
+  opacity: 0.7;
 }
 
-.pulse:before{
-    animation: pulse 2s ease-out infinite;
+.pulse:after {
+  position: absolute;
+  left: 0px;
+  bottom: 45px;
+  content: "";
+  height: 53px;
+  width: 130px;
+  background-color: white;
+  border-radius: 30px;
+  z-index: -1;
+  opacity: 0.7;
 }
 
-.pulse:after{
-    animation: pulse 2s 0.2s ease-out infinite;
+.pulse:before {
+  animation: pulse 2s ease-out infinite;
 }
 
-@keyframes pulse{
-    100%{
-        transform: scale(2);
-        opacity: 0;
-    }
+.pulse:after {
+  animation: pulse 2s 0.2s ease-out infinite;
 }
 
-
+@keyframes pulse {
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
 
 /* category_box animation */
-.categoryBoxAnimation{
-    animation: slideIn 1s ease-in-out;
+.categoryBoxAnimation {
+  animation: slideIn 1s ease-in-out;
 }
 
-@keyframes slideIn{
-    from{
-        opacity: 0;
-        right: 10px;
-    }
-    to{
-        opacity: 1;
-        right: 0;
-    }
-    
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    right: 10px;
+  }
+  to {
+    opacity: 1;
+    right: 0;
+  }
 }
 
 /*category nav bar*/
 
-#active{
-    
-    animation: zoomBig 0.5s;
-    animation-delay: 1s;
-    
+#active {
+  animation: zoomBig 0.5s;
+  animation-delay: 1s;
 }
 
-@keyframes zoomBig{
-    0%{
-        transform: scale(1);
-    }
-    50%{
-        transform: scale(1.2);
-    }
-    100%{
-        transform: scale(1);
-    }
+@keyframes zoomBig {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
-.nav_bar_category li{
-    animation: slideIn 1s;
-    animation-timing-function:cubic-bezier(0.42, 0, 0, 1.26)
+.nav_bar_category li {
+  animation: slideIn 1s;
+  animation-timing-function: cubic-bezier(0.42, 0, 0, 1.26);
 }
 
-@keyframes slideIn{
-    from{
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    to{
-        transform: translateX(0);
-    }
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
-
 
 /*CART ANIMATION*/
-.cart_Animation{
-    animation: 0.5s moveCart ease-in;  
-    animation-fill-mode: forwards;
+.cart_Animation {
+  animation: 0.5s moveCart ease-in;
+  animation-fill-mode: forwards;
 }
 
 @keyframes moveCart {
-    10% {
-        
-        transform: rotate(-15deg) scale(-1, 1);
-    }
-    20% {
-        transform: rotate(-2deg) translate(30px, 0px) scale(-1, 1);
-    }
-    100% {
-        transform: rotate(0deg) translate(350px, 0px) scale(-1, 1);
-        visibility: hidden;
-    }
+  10% {
+    transform: rotate(-15deg) scale(-1, 1);
+  }
+  20% {
+    transform: rotate(-2deg) translate(30px, 0px) scale(-1, 1);
+  }
+  100% {
+    transform: rotate(0deg) translate(350px, 0px) scale(-1, 1);
+    visibility: hidden;
+  }
 }
 
 .text_Animation {
-    animation: 0.5s moveText ease-in;
-    animation-fill-mode: forwards;
+  animation: 0.5s moveText ease-in;
+  animation-fill-mode: forwards;
 }
 
 @keyframes moveText {
-    10% {
-      transform: translate(0,0);
-    }
-    100% {
-      transform: translate(350px, 0px);
-      visibility: hidden;
-    }
+  10% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(350px, 0px);
+    visibility: hidden;
+  }
 }
 
 .text_Animation::before {
-    animation: 0.5s moveFirstSign ease-in;
-    animation-fill-mode: forwards;  
+  animation: 0.5s moveFirstSign ease-in;
+  animation-fill-mode: forwards;
 }
 
 @keyframes moveFirstSign {
-    5% {
-    
-    }
-    60% {
-        left: -140px;
-        width: 100px;
-    }
-    100% {
-        top: 15px;
-        left: -220px;
-        width: 200px;
-        visibility: hidden;
-    }
+  5% {
+  }
+  60% {
+    left: -140px;
+    width: 100px;
+  }
+  100% {
+    top: 15px;
+    left: -220px;
+    width: 200px;
+    visibility: hidden;
+  }
 }
 
 .text_Animation::after {
-    animation: 0.5s moveSecondSign ease-in;
-    animation-fill-mode: forwards;
-  
+  animation: 0.5s moveSecondSign ease-in;
+  animation-fill-mode: forwards;
 }
 
 @keyframes moveSecondSign {
-    5% {
-        transform: rotate(180deg);
-        top: 17px;
-        left: -15px;
-    }
-    60% {
-        transform: rotate(180deg);
-        left: -95px;
-        top: 17px;
-        width: 80px;
-    }
-    100% {
-        width: 170px;
-        top: 17px;
-        left: -185px;
-        transform: rotate(180deg);
-        visibility: hidden;
-    }
+  5% {
+    transform: rotate(180deg);
+    top: 17px;
+    left: -15px;
+  }
+  60% {
+    transform: rotate(180deg);
+    left: -95px;
+    top: 17px;
+    width: 80px;
+  }
+  100% {
+    width: 170px;
+    top: 17px;
+    left: -185px;
+    transform: rotate(180deg);
+    visibility: hidden;
+  }
 }
-
 
 /* shrink effect */
 .button_Animation {
-    animation: 0.6s moveButton ease-in-out 0.5s;
+  animation: 0.6s moveButton ease-in-out 0.5s;
 }
 @keyframes moveButton {
-    50% {
-        transform: scale(0.9,0.9)
-    }
+  50% {
+    transform: scale(0.9, 0.9);
+  }
 
-
-    100% {
-        transform: scale(1,1)
-    }
+  100% {
+    transform: scale(1, 1);
+  }
 }
 
 .button_Animation::before {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    visibility: hidden;
-    transform: translate(-50%, -50%);
-    content: 'Added';
-    color: white;
-    text-transform: uppercase;
-    animation: 0.6s moveAdded ease-out 0.5s;
-    animation-fill-mode: forwards;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  visibility: hidden;
+  transform: translate(-50%, -50%);
+  content: "Added";
+  color: white;
+  text-transform: uppercase;
+  animation: 0.6s moveAdded ease-out 0.5s;
+  animation-fill-mode: forwards;
 }
 @keyframes moveAdded {
-    0% {
-      visibility: visible;
-      font-size: 0px;
-    }
-    50% {
-      visibility: visible;
-      font-size: 14px;
-    }
-    100% {
-      visibility: visible;
-      font-size: 24px;
-    }
+  0% {
+    visibility: visible;
+    font-size: 0px;
+  }
+  50% {
+    visibility: visible;
+    font-size: 14px;
+  }
+  100% {
+    visibility: visible;
+    font-size: 24px;
+  }
 }
 
-
-.popUpAlertBox.open{
-    animation: pop 0.5s ease-in-out ;
-    transition: all 0.5s ease-in-out;
-    
+.popUpAlertBox.open {
+  animation: pop 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
-@keyframes pop{
-    0%{
-        transform: scale(0);
-    }
-    50%{
-        transform: scale(1.2);
-    }
-    100%{
-        transform: scale(1);
-    }
+@keyframes pop {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
-
-
-
-.cart{
-    animation: slidetoTop 0.75s;
+.cart {
+  animation: slidetoTop 0.75s;
 }
 
-@keyframes slidetoTop{
-    from{
-        opacity: 0;
-        transform: translateY(900%);
-    }
-    to{
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-@keyframes zoom{
-    0%{
-        transform: scale(0)
-    }
-    50%{
-        transform: scale(1.5)
-    }
-    100%{
-        transform: scale(1)
-    }
-}
-
-.product_card{
-    
-    animation: slideInAnimated 1s ease-in-out;
-    animation-timing-function:cubic-bezier(0.42, 0, 0, 1.26)
-}
-
-@keyframes slideInAnimated{
-    from{
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    to{
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-
-
-
-
-
-
-
-.addAnimation{
-    animation: 0.5s zoomOut ease-in-out;  
-    animation-fill-mode: forwards;
-}
-  
-@keyframes zoomOut{
-    0%{
-        transform: scale(0.95);
-    }
-    50%{
-        transform: scale(1.05);
-    }
-    100%{
-        transform: scale(1);
-    }
-}
-
-.aaa { 
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; 
+@keyframes slidetoTop {
+  from {
     opacity: 0;
-    animation: cd-item-slide-out .3s forwards;
+    transform: translateY(900%);
   }
-  
-  @keyframes cd-item-slide-out {
-    0% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-    100% {
-      transform: translateX(80px);
-      opacity: 0;
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-
-
-.minusAnimation{
-    animation: 0.5s zoomSmall ease-in-out;  
-    animation-fill-mode: forwards;
 }
 
-@keyframes zoomSmall{
-    0%{
-        border: 2px solid red;
-        transform: scale(0.98);
-    }
-    50%{
-        border: 2px solid red;
-        transform: scale(1.01);
-    }
-    100%{
-        transform: scale(1);
-    }
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
+.product_card {
+  animation: slideInAnimated 1s ease-in-out;
+  animation-timing-function: cubic-bezier(0.42, 0, 0, 1.26);
+}
+
+@keyframes slideInAnimated {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.addAnimation {
+  animation: 0.5s zoomOut ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoomOut {
+  0% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.aaa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  animation: cd-item-slide-out 0.3s forwards;
+}
+
+@keyframes cd-item-slide-out {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(80px);
+    opacity: 0;
+  }
+}
+
+.minusAnimation {
+  animation: 0.5s zoomSmall ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoomSmall {
+  0% {
+    border: 2px solid red;
+    transform: scale(0.98);
+  }
+  50% {
+    border: 2px solid red;
+    transform: scale(1.01);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
